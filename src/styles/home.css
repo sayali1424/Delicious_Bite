@@ -1,0 +1,274 @@
+/* Global Background */
+body {
+  background-color: #121212; /* Light Mint Green */ /* Light grey background for a clean look */
+  color: white; /* Dark text color for readability */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container to hold both the hero image and hero service section */
+.hero-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 30px;
+  background-color: #ffffff; /* White background for the hero section */
+  border-bottom: 1px solid #ddd; /* Light border for separation */
+}
+.hero__title{
+color:black;
+}
+/* Style for the hero image */
+.hero-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  margin-top: 50px;
+  border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Style for the hero service section */
+.hero__services {
+  width: 40%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #f9f9f9; /* Slightly off-white background for service section */
+  border-radius: 8px; /* Rounded corners for the service section */
+}
+
+/* Style for each service item */
+.hero__services p {
+  font-size: 1rem;
+  color: black; /* Dark text color for readability */
+  font-weight: bolder;
+  display: inline;
+}
+
+.service_i {
+  color: red;
+}
+
+/* Additional Styles */
+.feature__subtitle, .feature__title span, .testimonial__subtitle, .testimonial__title span, .hero_p_tag {
+  color: #df2020; /* Uniform color for important text */
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.feature__text, .feature__item p, .tasty__treat-desc, .choose__us-desc, .testimonial__desc,.feature__title {
+  color: black; /* Common text color for consistency */
+}
+
+/* Hero section animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero_p_tag, .hero-img {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.hero_p_tag:nth-child(1), .hero-img:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.hero_p_tag:nth-child(3), .hero-img:nth-child(4) {
+  animation-delay: 1s;
+}
+
+.hero_p_tag:nth-child(5), .hero-img:nth-child(6) {
+  animation-delay: 2s;
+}
+
+/* Order button styling */
+.order__btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #df2020; /* Attractive background color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order__btn i {
+  margin-left: 10px;
+}
+
+.order__btn:hover {
+  background-color: #ff4500;
+  transform: scale(1.05);
+}
+
+/* Food category button styles */
+.food__category {
+  background: linear-gradient(180deg, #df2020, #fff); /* Red to white gradient background */
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 0;
+  border-radius: 8px;
+}
+
+.food__category button {
+  border: none;
+  outline: none;
+  padding: 10px 25px;
+  background: #fff;
+  color: #df2020;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.food__category button:hover {
+  background: #df2020;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.food__category button img {
+  width: 20px;
+  height: 20px;
+}
+
+.foodBtnActive {
+  background: #fff !important;
+  border-radius: 5px;
+  color: #df2020 !important;
+}
+
+/* Box layout styles */
+.hero__boxes {
+  display: flex;
+  gap: 1rem;
+}
+
+.box {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+  
+}
+.box:hover {
+  cursor: pointer;
+  transform: scale(1.05); /* Slightly larger scale for more noticeable effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+.box h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.box .number {
+  color: red;
+  font-weight: bold;
+}
+
+.box {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box p:first-of-type {
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.box p:last-of-type {
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-img, .hero__service {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero-img {
+    margin-bottom: 20px;
+  }
+
+  .hero__content h5 {
+    font-size: 1rem;
+  }
+
+  .hero__content p, .hero__service p, .feature__item p, .feature__text, .tasty__treat-desc, .choose__us-desc, .testimonial__desc {
+    font-size: 0.8rem;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+    line-height: 40px;
+  }
+
+  .hero__btns button {
+    padding: 5px 15px;
+    font-size: 0.7rem;
+  }
+
+  .food__category {
+    padding: 15px;
+    background: linear-gradient(13deg, #df2020, #fff);
+  }
+
+  .food__category button {
+    padding: 7px 20px;
+    font-size: 0.9rem;
+  }
+
+  .choose__us-title {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero__content, .hero__service, .hero__btns {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .why__choose-us {
+    padding-top: 0 !important;
+  }
+}

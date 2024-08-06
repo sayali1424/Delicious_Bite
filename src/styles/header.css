@@ -1,0 +1,316 @@
+/* Ensure smooth scrolling across the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header container styling */
+.header-container {
+  width: 100%;
+  background: white; /* Ensure the container background is white */
+  display: flex;
+  justify-content: center;
+  position: relative; /* For relative positioning of child elements */
+}
+
+/* Header styling */
+.header {
+  width: calc(100% - 40px); /* Reduce width to leave space on both sides */
+  height: 100px; /* Set header height */
+  line-height: 100px; /* Align text vertically */
+  background: white; /* White background for the header */
+  position: sticky; /* Stick to the top when scrolling */
+  top: 0; /* Position at the top */
+  z-index: 99999; /* Ensure it's above other content */
+  box-shadow: 5px 5px 15px -5px #fde4e4; /* Shadow effect */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Padding for alignment */
+  margin: 0 auto; /* Center the header horizontally */
+  border-radius: 0 0 10px 10px; /* Curved bottom corners */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Logo styling */
+.logo {
+  display: flex;
+  align-items: center; /* Center the logo vertically */
+}
+
+.logo img {
+  z-index: 1; /* Ensure the image is above other content */
+  width: 90px; /* Set specific width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it fits within the container width */
+  object-fit: contain; /* Scale nicely within set width */
+  margin-top: 5px; /* Adjust top margin */
+  background-color: white; /* Ensure white background for the image */
+  transition: none; /* Disable any transition effects on scroll */
+}
+
+/* Header shrink effect (if applicable) */
+.header__shrink .logo img {
+  filter: none; /* Ensure no filters are applied */
+}
+
+/* Logo text styling */
+.logo h5 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: black; /* Text color for better contrast */
+  margin-top: -40px; /* Adjust top margin */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Menu styling */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  font-weight: 600;
+  font-size: 1rem;
+  color: black; /* Default text color */
+  position: relative; /* For pseudo-element positioning */
+  margin-left: 20px; /* Space between menu items */
+  padding-bottom: 2px; /* Space for underline */
+  transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.menu a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 30px; /* Position the underline 2px below text */
+  left: 0;
+  width: 0;
+  height: 2px; /* Height of the underline */
+  background: red; /* Red underline color */
+  transition: width 0.3s ease; /* Smooth transition for underline width */
+}
+
+.menu a:hover {
+  color: red; /* Change text color on hover */
+  transform: scale(1.1); /* Slightly scale up text on hover */
+}
+
+.menu a:hover::after {
+  width: 100%; /* Extend underline to full width on hover */
+}
+
+.active__menu {
+  color: red !important; /* Ensure active menu item color is red */
+}
+
+/* Navigation left icons styling */
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+.nav__left .cart__icon i,
+.nav__left .user i,
+.nav__left .mobile__menu i {
+  font-size: 1.3rem;
+  color: black; /* Default icon color */
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effects */
+}
+
+.nav__left .cart__icon i:hover,
+.nav__left .user i:hover,
+.nav__left .mobile__menu i:hover {
+  transform: scale(1.2); /* Slightly increase size on hover */
+  color: red; /* Change icon color on hover */
+}
+
+/* Cart badge styling */
+.cart__icon {
+  position: relative;
+}
+
+.cart__badge {
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  background: #ffcccc;
+  color: #000;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile menu styling */
+.mobile__menu {
+  font-weight: 600;
+  display: none; /* Hidden by default */
+}
+/* Styling for login button */
+.login-button {
+  padding: 10px 20px; /* Match padding with other buttons */
+  font-size: 16px; /* Font size to match other buttons */
+  font-weight: 600; /* Font weight to match other buttons */
+  color: black; /* Text color to match other buttons */
+  border: none; /* Remove default border */
+  background-color: transparent; /* Transparent background to match other buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: none; /* Remove underline from text */
+  position: relative; /* Positioning for pseudo-element */
+  display: inline-flex; /* Ensure flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Styling for login button */
+.login-button {
+  padding: 10px 20px; /* Match padding with other buttons */
+  font-size: 16px; /* Font size to match other buttons */
+  font-weight: 600; /* Font weight to match other buttons */
+  color: black; /* Text color to match other buttons */
+  border: none; /* Remove default border */
+  background-color: transparent; /* Transparent background to match other buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: none; /* Remove underline from text */
+  position: relative; /* Positioning for pseudo-element */
+  display: inline-flex; /* Ensure flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Styling for login button */
+.login-button {
+  padding: 10px 20px; /* Match padding with other buttons */
+  font-size: 16px; /* Font size to match other buttons */
+  font-weight: 600; /* Font weight to match other buttons */
+  color: black; /* Text color to match other buttons */
+  border: none; /* Remove default border */
+  background-color: transparent; /* Transparent background to match other buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: none; /* Remove underline from text */
+  position: relative; /* Positioning for pseudo-element */
+  display: inline-flex; /* Ensure flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Pseudo-element for underline effect */
+.login-button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 30px; /* Position the underline 2px below text */
+  left: 0;
+  width: 0;
+  height: 2px; /* Height of the underline */
+  background: red; /* Red underline color */
+  transition: width 0.3s ease; /* Smooth transition for underline width */
+}
+
+/* Hover effect for login button */
+.login-button:hover {
+  color: red; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.login-button:hover::after {
+  width: 100%; /* Extend underline to full width on hover */
+}
+
+.login-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.5); /* Add custom focus outline */
+}
+
+
+
+/* Responsive adjustments */
+@media only screen and (max-width: 992px) {
+  .logo img {
+    width: 70%; /* Adjust logo width for smaller screens */
+    max-width: 150px; /* Set a max-width for better scaling */
+    margin: 0 auto; /* Center logo horizontally */
+    display: block; /* Ensure block display for centering */
+  }
+
+  .logo h5 {
+    font-size: 0.8rem;
+    margin-top: 5px; /* Adjust top margin to position text below the logo */
+    text-align: center; /* Center the text below the logo */
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.425); /* Dark overlay */
+    z-index: 99;
+    display: none; /* Hidden by default */
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #fff; /* White background for menu */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    line-height: 20px;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+  }
+
+  .mobile__menu {
+    display: block; /* Show mobile menu */
+  }
+
+  .nav__left .cart__icon i,
+  .nav__left .user i,
+  .nav__left .mobile__menu i {
+    font-size: 1rem;
+  }
+
+  .show__menu {
+    display: block; /* Show menu */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    width: calc(100% - 40px);
+    height: 80px; /* Adjust height for smaller screens */
+    line-height: 80px; /* Adjust line height */
+    display: flex; /* Ensure flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between items */
+  }
+
+  .logo img {
+    width: 50%; /* Adjust logo width for smaller screens */
+    max-width: 120px; /* Set a max-width for better scaling */
+    margin: 0 auto; /* Center logo horizontally */
+  }
+
+  .logo h5 {
+    font-size: 0.7rem;
+    margin-top: 5px; /* Adjust top margin to position text correctly */
+    text-align: center; /* Center the text below the logo */
+  }
+}

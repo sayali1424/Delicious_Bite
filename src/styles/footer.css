@@ -1,0 +1,115 @@
+.footer {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background: white
+}
+
+.footer__logo img {
+  width: calc(100% - 80%);
+  margin-bottom: 5px;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(30%) saturate(500%) hue-rotate(-10deg) brightness(95%) contrast(85%);
+  transition: filter 0.3s ease;
+}
+.logo img {
+  z-index: 1; /* Ensure the image is above other content */
+  width: 90px; /* Set specific width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it fits within the container width */
+  object-fit: contain; /* Scale nicely within set width */
+  margin-top: 5px; /* Adjust top margin */
+  background-color: white; /* Ensure white background for the image */
+  transition: none; /* Disable any transition effects on scroll */
+}
+
+.footer__logo h5 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.footer__logo p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 28px;
+}
+
+.delivery__time-item {
+  background: transparent !important;
+}
+
+.delivery__time-item span {
+  font-weight: 600;
+  font-size: 1rem;
+  color: black;
+}
+
+.delivery__time-item p {
+  color: black;
+}
+.footer__title {
+  font-size: 1.1rem;
+  color: black;
+  font-weight: 600;
+}
+
+
+
+.social__links span i {
+  padding: 5px;
+  background: #df2020;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.copyright__text {
+  font-size: 1.2rem;
+  font-weight: bold;
+ 
+  
+  color: black;
+}
+
+@media only screen and (max-width: 992px) {
+  .newsletter input {
+    padding: 7px;
+    font-size: 0.7rem;
+  }
+  .newsletter span {
+    padding: 4px 20px;
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__title {
+    font-size: 0.8rem;
+  }
+
+  .delivery__time-item span {
+    font-size: 0.8rem;
+  }
+
+  .delivery__time-item p {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .copyright__text {
+    text-align: center;
+  }
+
+  .social__links p {
+    font-size: 0.8rem;
+  }
+
+  .social__links span {
+    padding: 4px;
+  }
+  .social__links span a {
+    font-size: 0.7rem;
+  }
+}
+
